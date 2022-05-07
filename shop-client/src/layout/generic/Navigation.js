@@ -10,7 +10,7 @@ export default function Navigation() {
   return (
     <nav
       style={{ direction: 'rtl' }}
-      className='md:hidden flex justify-center items-center fixed bottom-0 left-0 w-full h-16 bg-white rounded-t-xl text-2xl text-gray-400 text-center shadow-up'
+      className='md:hidden flex justify-center items-center fixed bottom-0 left-0 w-full h-16 bg-white dark:bg-gray-100 rounded-t-xl text-2xl text-gray-400 text-center shadow-up'
     >
       {TABS.map(({ title, icon, path }) => (
         <NavButton

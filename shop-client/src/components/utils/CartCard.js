@@ -50,7 +50,7 @@ export default function CartCard({ id, name, price, img, quantity = 1 }) {
         </div>
         <div className='grid grow pr-4'>
           <div className='flex justify-between'>
-            <h2 className='self-center lg:text-lg mt-2'> {name}</h2>
+            <h2 className='self-center lg:text-lg mt-2 dark:text-gray-200'> {name}</h2>
             <i
               onClick={handleRemove}
               className='fa-solid fa-xmark text-red-600 font-bold ml-2 cursor-pointer'

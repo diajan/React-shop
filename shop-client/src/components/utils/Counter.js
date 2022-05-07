@@ -21,7 +21,7 @@ export default function Counter({ defaultValue = 1, onIncrease, onDecrease }) {
       >
         +
       </button>
-      <span className='border rounded border-red-600 py-1 px-2 mx-2'>
+      <span className='border rounded dark:text-gray-200 border-red-600 py-1 px-2 mx-2'>
         {counter}
       </span>
       <button

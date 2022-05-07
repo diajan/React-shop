@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { TABS } from '../../tools/constant'
@@ -53,10 +53,19 @@ function HeaderPC() {
   )
 }
 function HeaderMobile() {
+  const [showSearch, setShowSearch] = useState(false)
+  const searchBar = useRef()
+ 
   const { pathname } = useLocation()
+  const [search, setSearch] = useRecoilState(textSearch)
 
+  const handleChange = ({ target }) => setSearch(target.value)
+  const handleShowSearch = () => {
+    searchBar.current.classList.toggle('open-search')
+    setShowSearch(s => !s)
+  }
   return (
-    <header className='w-11/12 mx-auto flex h-16 justify-center items-center pt-8 mb-8'>
+    <header className='w-11/12 mx-auto flex h-16 justify-center items-center pt-8 mb-8 overflow-hidden'>
       <div className=' flex -space-x-2 overflow-hidden'>
         <img
           className='inline-block h-12 w-12 rounded-full object-cover object-center'
@@ -67,8 +76,25 @@ function HeaderMobile() {
       <Title className='grow text-center font-semibold text-2xl dark:text-gray-100'>
         {TABS.find(({ path }) => path === pathname).title}
       </Title>
-      <div className='flex justify-center items-center bg-white w-8 h-8 rounded shadow'>
-        <i className='text-lg fa-solid fa-magnifying-glass'></i>
+      <div
+        ref={searchBar}
+        className='flex justify-center items-center bg-white dark:bg-gray-100 w-8 h-8 rounded shadow transition-all'
+      >
+        {showSearch ? (
+          <input
+            className='rounded-lg text-gray-500 p-1'
+            onChange={handleChange}
+            type='text'
+            placeholder='جست و جو کنید'
+            value={search}
+            onBlur={handleShowSearch}
+          />
+        ) : (
+          <i
+            onClick={handleShowSearch}
+            className='text-lg fa-solid fa-magnifying-glass'
+          ></i>
+        )}
       </div>
     </header>
   )

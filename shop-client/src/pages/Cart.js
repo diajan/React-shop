@@ -54,13 +54,13 @@ export default function Category() {
         <div className='md:col-span-5 lg:col-span-4 sticky h-fit top-10'>
           <Box className='h-32 mb-7 mt-12 md:mt-0'>
             <div className='flex justify-between my-3 p-2'>
-              <h4 className='text-gray-800 font-bold'>مجموع قیمت: </h4>
+              <h4 className='text-gray-800 dark:text-gray-200 font-bold'>مجموع قیمت: </h4>
               <span className='text-red-500 text-xl'>
                 {toMoney(totalPrice)}
               </span>
             </div>
             <div className='p-2'>
-              <button className='text-blue-900'>کد تخفیف دارید؟</button>
+              <button className='text-blue-900 dark:text-blue-400'>کد تخفیف دارید؟</button>
             </div>
           </Box>
           <Button className={'w-full bg-red-400 text-lg hover:bg-none mb-2'}>

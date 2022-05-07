@@ -18,3 +18,7 @@
 .show {
   max-height: 100vh;
 }
+
+.open-search {
+  width: 11rem !important;
+}

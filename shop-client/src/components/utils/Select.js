@@ -8,7 +8,7 @@ export default function Select({ icon, title, row }) {
     <div
       onClick={() => setShow(s => !s)}
       onBlur={() => setShow(false)}
-      className='flex relative items-center w-full h-10 bg-white rounded-md hover:ring hover:ring-blue-900'
+      className='flex relative items-center w-full h-10 bg-white dark:bg-gray-100 rounded-md hover:ring hover:ring-blue-900'
     >
       {icon}
       <span className='font-semibold text-gray-800'>
