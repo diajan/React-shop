@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 
 export default function Category() {
   return (
-    <Main>
+    <Main filterNone>
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 '>
         <div className='h-56 md:h-auto p-10 bg-white dark:bg-gray-600 rounded-3xl relative'>
           <Link to={'/home?category=اپل'}>

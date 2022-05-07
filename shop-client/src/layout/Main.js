@@ -33,8 +33,8 @@ function BeSideBar({ children, filterNone }) {
         <Sidebar />
       </div>
       <div className='md:col-span-9 lg:col-span-10 relative'>
-        {/* {!filterNone && <Filter />} */}
-        <Filter />
+        {!filterNone && <Filter />}
+        {/* <Filter /> */}
         {children}
       </div>
     </main>

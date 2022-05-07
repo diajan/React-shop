@@ -27,20 +27,3 @@ export default function NotFound({ text = 'نتیجه ای یافت نشد ):', 
     </>
   )
 }
-
-// <div className='flex flex-col'>
-//   <div className='w-6/12 mx-auto mt-5'>
-//     <img
-//       className='object-contain object-center w-full h-full'
-//       src={noData}
-//       alt='not found'
-//     />
-//   </div>
-//   <div className='text-center'>
-//     <h2
-//       className={`xl:text-2xl text-xl col-start-2 text-gray-500 mt-10 ${className}`}
-//     >
-//       {text}
-//     </h2>
-//   </div>
-// </div>
