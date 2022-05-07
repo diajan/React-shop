@@ -1,28 +1,46 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import Button from './Button'
 
-export default function NotFound({
-  text = 'محصول مورد نظر یافت نشد ):',
-  className,
-}) {
+export default function NotFound({ text = 'نتیجه ای یافت نشد ):', img }) {
   return (
     <>
-      <div className='grid grid-cols-3 place-items-center'>
-        <svg
-          xmlns='http://www.w3.org/2000/svg'
-          fill='currentColor'
-          className='bi bi-emoji-dizzy'
-          viewBox='0 0 16 16'
-          style={{ gridColumnStart: 2, color: '#cbd5e1' }}
-        >
-          <path d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z' />
-          <path d='M9.146 5.146a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708.708l-.647.646.647.646a.5.5 0 0 1-.708.708l-.646-.647-.646.647a.5.5 0 1 1-.708-.708l.647-.646-.647-.646a.5.5 0 0 1 0-.708zm-5 0a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 1 1 .708.708l-.647.646.647.646a.5.5 0 1 1-.708.708L5.5 7.207l-.646.647a.5.5 0 1 1-.708-.708l.647-.646-.647-.646a.5.5 0 0 1 0-.708zM10 11a2 2 0 1 1-4 0 2 2 0 0 1 4 0z' />{' '}
-        </svg>
-        <h2
-          className={`xl:text-2xl lg:text-lg col-start-2 text-gray-500 mt-10 ${className}`}
-        >
+      <div className='w-3/5 mx-auto mt-10'>
+        <div className='h-44 relative'>
+          <img
+            className='object-contain object-center h-full w-full'
+            src={img}
+            alt='exmpty'
+          />
+        </div>
+        <h1 className='text-center sm:text-2xl dark:text-gray-200 my-12'>
           {text}
-        </h2>
+        </h1>
+        <div className='flex'>
+          <Button
+            className={'w-4/5 mx-auto text-sm bg-red-500 md:text-lg mb-4'}
+          >
+            <Link to='/home'>رفتن به فروشگاه</Link>
+          </Button>
+        </div>
       </div>
     </>
   )
 }
+
+// <div className='flex flex-col'>
+//   <div className='w-6/12 mx-auto mt-5'>
+//     <img
+//       className='object-contain object-center w-full h-full'
+//       src={noData}
+//       alt='not found'
+//     />
+//   </div>
+//   <div className='text-center'>
+//     <h2
+//       className={`xl:text-2xl text-xl col-start-2 text-gray-500 mt-10 ${className}`}
+//     >
+//       {text}
+//     </h2>
+//   </div>
+// </div>

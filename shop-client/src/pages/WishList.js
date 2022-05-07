@@ -5,6 +5,7 @@ import { useFilter } from '../tools/hooks'
 import NotFound from '../components/utils/NotFound'
 import Main from '../layout/Main'
 import Product from '../components/utils/ProductCard'
+import noData from '../assets/img/no_data_.svg'
 
 export default function WishList() {
   const items = useRecoilValue(wishListItems) || []
@@ -13,7 +14,7 @@ export default function WishList() {
   return (
     <Main>
       {!products.length ? (
-        <NotFound text='چیزی موجود نیست ):' />
+        <NotFound text='چیزی موجود نیست ):' img={noData} />
       ) : (
         <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4'>
           {products.map(({ id, name, category, colors, image, price }) => (

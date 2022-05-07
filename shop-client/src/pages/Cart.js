@@ -6,8 +6,8 @@ import CartCard from '../components/utils/CartCard'
 import Main from '../layout/Main'
 import { cartItems } from '../recoil/atom/cart'
 import { setLocalStorage, toMoney } from '../tools/helper'
+import NotFound from '../components/utils/NotFound'
 import EmptyCart from '../assets/img/undraw_empty_cart.svg'
-import Link from '../components/utils/Link'
 
 export default function Category() {
   const [cart, setCart] = useRecoilState(cartItems)
@@ -29,21 +29,7 @@ export default function Category() {
   if (cart.length === 0) {
     return (
       <Main sidebarNone>
-        <div className='w-2/5 mx-auto'>
-          <div className='h-44 relative'>
-            <img
-              className='object-contain object-center h-full w-full'
-              src={EmptyCart}
-              alt='exmpty cart'
-            />
-          </div>
-          <h1 className='text-center text-2xl my-12'>سبد خرید خالی است ):</h1>
-          <div className='flex'>
-            <Button className={'w-4/5 mx-auto bg-red-500 text-lg mb-4'}>
-              <Link to='/home'>رفتن به فروشگاه</Link>
-            </Button>
-          </div>
-        </div>
+        <NotFound text=' سبد خرید خالی است ):' img={EmptyCart} />
       </Main>
     )
   }
@@ -66,7 +52,7 @@ export default function Category() {
 
         {/* Sidebar */}
         <div className='md:col-span-5 lg:col-span-4 sticky h-fit top-10'>
-          <Box className='h-32 mb-8'>
+          <Box className='h-32 mb-7 mt-12 md:mt-0'>
             <div className='flex justify-between my-3 p-2'>
               <h4 className='text-gray-800 font-bold'>مجموع قیمت: </h4>
               <span className='text-red-500 text-xl'>

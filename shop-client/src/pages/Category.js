@@ -8,8 +8,8 @@ import { Link } from 'react-router-dom'
 export default function Category() {
   return (
     <Main>
-      <div className='grid grid-cols-3 gap-5 '>
-        <div className='p-10 bg-white rounded-3xl relative'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 '>
+        <div className='h-56 md:h-auto p-10 bg-white dark:bg-gray-600 rounded-3xl relative'>
           <Link to={'/home?category=اپل'}>
             <img
               className='object-contain object-center h-full w-full'
@@ -18,7 +18,7 @@ export default function Category() {
             />
           </Link>
         </div>
-        <div className='p-10 bg-white rounded-3xl lrelative'>
+        <div className='h-56 md:h-auto p-10 bg-white dark:bg-gray-600 rounded-3xl lrelative'>
           <Link to={'/home?category=شیائومی'}>
             <img
               className='object-contain object-center h-full w-full'
@@ -27,7 +27,7 @@ export default function Category() {
             />
           </Link>
         </div>
-        <div className='p-10 bg-white rounded-3xl lrelative'>
+        <div className='h-56 md:h-auto p-10 bg-white dark:bg-gray-600 rounded-3xl lrelative'>
           <Link to={'/home?category=سامسونگ'}>
             <img
               className='object-contain object-center h-full w-full'

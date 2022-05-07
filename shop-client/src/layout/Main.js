@@ -9,7 +9,7 @@ import Filter from './generic/Filter'
 export default function Main({ children, filterNone, sidebarNone }) {
   return (
     <>
-      <div className='bg-gray-100 dark:bg-gray-800'>
+      <div className='bg-gray-100 dark:bg-gray-800 min-h-[100vh]'>
         <Header />
         {sidebarNone ? (
           <WhitoutSideBar children={children} />
