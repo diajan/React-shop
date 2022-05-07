@@ -5,21 +5,21 @@ you don't need run server
 
 ### `/react-eccomerce/shop-server$ php artisan serve`
 
-just run the command and you can see the result
+### just run the command and you can see the result
 
-### run `yarn start`
+ run `yarn start`
 
 If you want to test it, you must have experience working with Back-End and Laravel
 
 In order:
 
-**1- run `mysql`**
-**2- create a Database named `laravel`**
-**3- run `php artisan migrate`**
-**4- run `php artisan db:seed`**
-**5- run `php artisan serve`**
-**5- run the client `yarn start`**
-**6- Enjoy it (:**
+**1- run `mysql`** <br/>
+**2- create a Database named `laravel`** <br/>
+**3- run `php artisan migrate`**<br/>
+**4- run `php artisan db:seed`**<br/>
+**5- run `php artisan serve`**<br/>
+**5- run the client `yarn start`**<br/>
+**6- Enjoy it (:**<br/>
 
 # Getting Started with Create React App
 
